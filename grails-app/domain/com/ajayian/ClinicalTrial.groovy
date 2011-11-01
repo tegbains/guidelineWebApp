@@ -26,6 +26,8 @@ class ClinicalTrial {
 
     String comments
     
+    Drug drug
+    
     String toString() {
     	return trialName
     }

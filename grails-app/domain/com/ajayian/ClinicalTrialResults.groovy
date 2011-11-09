@@ -8,6 +8,7 @@ class ClinicalTrialResults {
     ClinicalTrial clinicalTrial
     
     Integer resultOrder
+	String resultOutcomeTitle
 
     String resultOutcome
     Float resultOutcomePlaceboValue

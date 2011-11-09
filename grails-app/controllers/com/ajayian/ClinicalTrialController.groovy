@@ -2,6 +2,7 @@ package com.ajayian
 
 import org.springframework.dao.DataIntegrityViolationException
 import grails.converters.JSON
+import grails.web.JSONBuilder
 
 class ClinicalTrialController {
 
@@ -21,5 +22,30 @@ class ClinicalTrialController {
         render ClinicalTrial.get(params.id) as JSON
     }
 
+	def showJSON2 = { 
+	
+		def aTrial = ClinicalTrial.get(params.id)
+        render aTrial as JSON
+    }
+
+
+	def test = {
+	
+		def builder = new JSONBuilder()
+		def result = builder.build {
+			categories = ['a', 'b', 'c']
+			title ="Hello JSON"
+			information = {
+				pages = 10
+			}
+		}
+		
+		// prints the JSON text
+		println result.toString()
+		
+		def sw = new StringWriter()
+		render sw
+	
+	}
   
 }

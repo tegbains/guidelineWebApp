@@ -7,16 +7,16 @@ dataSource {
 	driverClassName = "com.mysql.jdbc.Driver"
 	dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 	
-	//run the evictor every 30 minutes and evict any connections older than 30 minutes.
-    minEvictableIdleTimeMillis=1800000
-    timeBetweenEvictionRunsMillis=1800000
-    numTestsPerEvictionRun=3
-    //test the connection while its idle, before borrow and return it
-    testOnBorrow=true
-    testWhileIdle=true
-    testOnReturn=true
-    validationQuery="SELECT 1"
-
+	// Other database parameters..
+    properties {
+       maxActive = 50
+       maxIdle = 25
+       minIdle = 5
+       initialSize = 5
+       minEvictableIdleTimeMillis = 1800000
+       timeBetweenEvictionRunsMillis = 1800000
+       maxWait = 10000
+    }
     
 }
 hibernate {

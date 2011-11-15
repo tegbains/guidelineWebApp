@@ -30,7 +30,7 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop','update'
             // url = "jdbc:h2:devDb"
-            url = "jdbc:mysql://localhost/guidelineappDev?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost/guidelineappdev?useUnicode=yes&characterEncoding=UTF-8"
             username = "guidelineappdev"
 			password = "1easy@user"
         }
@@ -44,7 +44,10 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb"
+            // url = "jdbc:h2:prodDb"
+            url = "jdbc:mysql://localhost/guidelineappdev?useUnicode=yes&characterEncoding=UTF-8"
+            username = "guidelineappdev"
+			password = "1easy@user"
         }
     }
 }

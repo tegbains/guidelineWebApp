@@ -1,7 +1,7 @@
 # the build
 Build
 build
-target
+target/*
 # DerivedData
 Docs/API
 

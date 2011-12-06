@@ -28,6 +28,8 @@ class ClinicalTrial {
     
     Drug drug
     
+    String trialDataSource
+    
     String toString() {
     	return trialName
     }
@@ -37,6 +39,8 @@ class ClinicalTrial {
    		trialAbbreviation()
    		trialDescription()
    		trialAuthors()
+   		trialDataSource(inList: ["Original", "Meta-Analysis", "Other"])
+   		
 	}
 
 }

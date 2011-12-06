@@ -11,6 +11,8 @@
 // }
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
+
+
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
@@ -72,7 +74,12 @@ log4j = {
     //
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+    //	rollingFile name: "stacktrace", maxFileSize: 1024, file: "/var/log/piws-stacktrace.log"
+    //
+    //rollingFile name:"guidelinewebappAppender", maxFileSize:1024, fileName:"/tmp/logs/guidelinewebapp.log"
     //}
+
+	
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP

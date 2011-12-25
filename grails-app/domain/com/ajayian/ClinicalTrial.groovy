@@ -35,12 +35,30 @@ class ClinicalTrial {
     }
 
 	static constraints = {
+	
+		subCategory()
    		trialName()
    		trialAbbreviation()
    		trialDescription()
    		trialAuthors()
+   		
+   		publication()
+   		publicationYear()
+   		publicationDateIndex()
+   		
+   		patientNumbers()
+   		patientDescription()
+   		
+   		therapeuticClass()
+   		drug()
+   		
+   		interventionMonths()
+   		intervention()
+   		
    		trialDataSource(inList: ["Original", "Meta-Analysis", "Other"])
    		
+   		
+   		comments()
 	}
 
 }

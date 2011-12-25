@@ -10,6 +10,8 @@ class Drug {
     String AHFSId
     List brandNames
     
+    TherapeuticClass therapeuticClass
+    
 	String toString() {
     	return genericName
     }
